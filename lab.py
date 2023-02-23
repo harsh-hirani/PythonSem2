@@ -1,17 +1,12 @@
-# Given the coordinates (x,y) of center of a circle and its radius, determine whether a point lies inside the circle, on the
-# circle or outside the circle. (Hint: Use sqrt( ), pow( ) ) 
-from math import sqrt
+# Given three points (x1,y1), (x2,y2) and (x3,y3), check if all the three points fall on one straight line.
+f = [1,1]
+s= [2,2]
+t = [3,4]
 
-
-circle = [5,5,10]#[x,y,radius]
-x = float(input('enter x cordinate:'))
-y = float(input('enter y cordinate:'))
-diff = sqrt((circle[0] - x)**2 +(circle[1] - y)**2)
-print('given point is ',end='')
-if diff < circle[2]:
-    print('INSIDE a ',end='')
-elif(diff>circle[2]):
-    print('OUTSIDE a ',end='')
+if (f[0]==s[0] and s[0]==t[0]) or (f[1]==s[1] and s[1]==t[1]):
+    print("in lines")
 else:
-    print('ON a ',end='')
-print('circle.')
+    if (f[0]-s[0])/(f[1] - s[1]) == (s[0] - t[0])/(s[1] - t[1]):
+        print("in lines")
+    else:
+        print('not in lines')
