@@ -1,12 +1,23 @@
-# Given three points (x1,y1), (x2,y2) and (x3,y3), check if all the three points fall on one straight line.
-f = [int(input('enter x1 :')),int(input('enter y1 :'))]
-s = [int(input('enter x2 :')),int(input('enter y1 :'))]
-t = [int(input('enter x3 :')),int(input('enter y1 :'))]
-
-if (f[0]==s[0] and s[0]==t[0]) or (f[1]==s[1] and s[1]==t[1]):
-    print("in lines")
+# WAP to ask the number of lines from the user and print the following pattern:
+#  1
+#  AB
+#  234
+#  ABCD 
+import string
+alphabet = list(string.ascii_uppercase)
+lines = int(input('enter the lines'))
+if lines < 1:
+    print('lines should be more than 0.')
+    exit()
 else:
-    if (f[0]-s[0])/(f[1] - s[1]) == (s[0] - t[0])/(s[1] - t[1]):
-        print("in lines")
-    else:
-        print('not in lines')
+    for i in range(1,lines+1):
+        print()
+        if( i%2 == 0 ):
+            #chars
+            for j in range(0,i):
+                print(alphabet[j],end=" ")
+            
+        else:
+            # numbers
+            for j in range(1,i+1):
+                print(j,end=" ")
