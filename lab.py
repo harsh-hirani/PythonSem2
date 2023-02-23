@@ -12,6 +12,8 @@ if lines < 1:
 else:
     for i in range(1,lines+1):
         print()
+        for k in range(0,lines-i):
+            print('  ',end="")
         if( i%2 == 0 ):
             #chars
             for j in range(0,i):
