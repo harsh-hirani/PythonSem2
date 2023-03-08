@@ -1,7 +1,19 @@
-# Display the user specified term in Fibonacci series using a recursive function fibo()
-def fibo(n):
-    if n<2:
-        return 1
-    return (fibo(n-1)+fibo(n-2))
-value = int(input('Enter the term of Fibonacci series: '))
-print('nth term of Fibonacci series: ',fibo(value))
+# WAP to read two text files and merge their contents into a third file.
+
+
+file1 = open("t.txt", "r")
+file2 = open("w.txt", "r")
+file3 = open("z.txt", "w")
+data1 = file1.read()
+data2 = file2.read()
+print(data1)
+print(data2)
+file3.write(data1+data2)
+
+file1.close()
+file2.close()
+file3.close()
+
+file3 = open("z.txt", "r")
+print(file3.read())
+file3.close()
