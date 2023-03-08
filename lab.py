@@ -1,19 +1,13 @@
-# WAP to read two text files and merge their contents into a third file.
-
-
-file1 = open("t.txt", "r")
-file2 = open("w.txt", "r")
-file3 = open("z.txt", "w")
-data1 = file1.read()
-data2 = file2.read()
-print(data1)
-print(data2)
-file3.write(data1+data2)
-
-file1.close()
-file2.close()
-file3.close()
-
-file3 = open("z.txt", "r")
-print(file3.read())
-file3.close()
+# Write a program in Python to create a CSV file by entering user-id and password, read and search the password for given user-id.
+import csv
+file = open('csvtest.csv','w')
+fileobj = csv.writer(file)
+fileobj.writerow(["User Id", "password"])
+user_id = input("enter user id: ")
+password = input("enter user password: ")
+record = [user_id, password]
+fileobj.writerow(record)
+file.close()
+file = open('csvtest.csv', 'r')
+print(file.read())
+file.close()
