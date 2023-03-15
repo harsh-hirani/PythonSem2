@@ -1,22 +1,40 @@
 # House down payment planner 
-totalValue = float(input('Total Value: '))
-portion_down_payment = 0.25
-current_savings = float(input('Current Saving: '))
-r = 0.04
-annual_salary = float(input('Annual salary: '))
-portion_saved = float(input('portion of your salary: '))/100
-months = 0
-savings = current_savings
-print('-------------')
-print('Your target is: ',totalValue*portion_down_payment)
-if savings >= totalValue*portion_down_payment:
-    print('You already have enough money to buy a house :)')
-else:
-    while savings<totalValue*portion_down_payment:
-        current_savings = current_savings + current_savings*r/12
-        savings = savings + current_savings*r/12 + annual_salary*portion_saved/12
-        months = months + 1
-        print("Month: ",months)
-        print('savings: ' ,savings,' { +',(current_savings*r/12+annual_salary*portion_saved/12),' }')
+import csv
+csvFile=open('test.csv','w')
+writer = csv.writer(csvFile)
+writer.writerow(['uid','pass'])
+s = True
+while s:
+    uid = input("Uid: ")
+    pas = input("Pass: ")
+    writer.writerow([uid,pas])
+    if(input('want to add more? y/n: ') == 'n'):
+        s=False
+        break
 
-        print("Congratulation After ",months," months you can buy your house")
+csvFile.close()
+csvFile = open('test.csv','r')
+csvReader = csv.reader(csvFile)
+uid = input('uid: ')
+indexii = 0
+for row in csvReader:
+    if(indexii%2==1):
+        indexii = indexii +1
+        continue
+    indexii = indexii + 1
+    # print(row)
+    if row[0] == uid:
+        pas = input('Pass: ')
+        if pas == row[1]:
+            print('You can login')
+            exit(0)
+        else:
+            pas = input('incorect pass try again: ')
+            if pas == row[1]:
+                print('You can login')
+                exit(0)
+            else:
+                print('system locked.')
+                exit(0)
+print("wrong uid")
+csvFile.close()
