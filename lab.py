@@ -1,14 +1,8 @@
-# p4 2 - WAP that takes two lists and returns True if they have at least one common member.
-l1_size = int(input('size of First list: '))
-l1 = []
-for i in range(0,l1_size):
-    l1.append(input(f"member{i}:"))
-l2_size = int(input("---------------\nsize of Second list: "))
-l2 = []
-for i in range(0,l2_size):
-    l2.append(input(f"member{i}:"))
-for e in l1:
-    if e in l2:
-        print(f"yes it has '{e}' common in both")
-        exit(0)
-print('not at least one member is common')
+# p4 3 - WAP program to print a specified list after removing the 0th, 2nd, 4th and 5th elements
+test_list = [0,1,3,4,5,6,7,8,9]
+test_list = [e for count,e in enumerate(test_list) if count not in [0,2,4,5] ]
+# test_list.pop(5)
+# test_list.pop(4)
+# test_list.pop(2)
+# test_list.pop(0)
+print(test_list)
