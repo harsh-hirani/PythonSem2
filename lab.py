@@ -1,31 +1,19 @@
-# p5 4 - WAP to implement matrix multiplication
-mat1 = list()
-mat2 = list()
-raw = int(input('Raw: '))
-column = int(input('column: '))
-# function to take matrix as input
-def matcollect(r,c,typ=''):
-    returnlist = list()
-    for i in range(0,r):
-        tempList = list()
-        for j in range(0,c):
-            if typ == 'nor':
-                tempList.append(0)
-            else:
-                tempList.append(int(input(f"{i+1}x{j+1} : ")))
-                
-        returnlist.append(tempList)
-    return returnlist
-print('first matrix:')
-mat1 = matcollect(raw,column)
-print('second matrix:')
-mat2 = matcollect(raw,column)
-mat3 = matcollect(raw,column,typ='nor')
-# multiplying
-for i,f in enumerate(mat1):
-    for j,iner in enumerate(f):
-        for c,asiehi in enumerate(f):
-            mat3[i][j] += mat1[i][c]*mat2[c][j]
-print('output')
-for q in mat3:
-    print(q)
+# p5 5 - 
+'''
+Given a list of elements, perform grouping of similar elements, as different key-value list in dictionary.
+Input : test_list = [4, 6, 6, 4, 2, 2, 4, 8, 5, 8] -> Output : {4: [4, 4, 4], 6: [6, 6], 2: [2, 2], 8: [8, 8], 5: [5]}
+Input : test_list = [7, 7, 7, 7] -> Output : {7 : [7, 7, 7, 7]} 
+'''
+test_list1 = [4, 6, 6, 4, 2, 2, 4, 8, 5, 8]
+test_list2 = [7, 7, 7, 7]
+
+def itreter(l):
+    returndict = dict()
+    for i in l:
+        if i in returndict:
+            returndict[i].append(i)
+        else:
+            returndict[i]= list((i,))#add coma to make it list or it will be int
+    return returndict
+print(itreter(test_list1))
+print(itreter(test_list2))
