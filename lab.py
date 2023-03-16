@@ -1,19 +1,24 @@
-# p5 5 - 
-'''
-Given a list of elements, perform grouping of similar elements, as different key-value list in dictionary.
-Input : test_list = [4, 6, 6, 4, 2, 2, 4, 8, 5, 8] -> Output : {4: [4, 4, 4], 6: [6, 6], 2: [2, 2], 8: [8, 8], 5: [5]}
-Input : test_list = [7, 7, 7, 7] -> Output : {7 : [7, 7, 7, 7]} 
-'''
-test_list1 = [4, 6, 6, 4, 2, 2, 4, 8, 5, 8]
-test_list2 = [7, 7, 7, 7]
-
-def itreter(l):
-    returndict = dict()
-    for i in l:
-        if i in returndict:
-            returndict[i].append(i)
-        else:
-            returndict[i]= list((i,))#add coma to make it list or it will be int
-    return returndict
-print(itreter(test_list1))
-print(itreter(test_list2))
+# p4 4 - Formulate a problem definition of your own and demonstrate functions as objects
+class func:
+    def __init__(self,props):
+        self.props = props
+        self.total = 0
+        self.multiall = 1
+    def sumAll(self):
+        self.total = 0
+        self.multiall = 1
+        for e in self.props:
+            self.total += e
+        return self.total
+    def multiAll(self):
+        self.total = 0
+        self.multiall = 1
+        for e in self.props:
+            self.multiall *= e
+        return self.multiall
+    def __str__(self) -> str:
+        return "{'sum' :"+f"{self.sumAll()}"+",'multiAll' :"+f"{self.multiAll()}"+'}'
+myobj = func([1,2,3,4,5])
+print(myobj)
+print(myobj.sumAll())
+print(myobj.multiAll())
