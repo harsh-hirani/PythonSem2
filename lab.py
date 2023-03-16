@@ -1,24 +1,37 @@
-# p4 4 - Formulate a problem definition of your own and demonstrate functions as objects
-class func:
-    def __init__(self,props):
-        self.props = props
-        self.total = 0
-        self.multiall = 1
-    def sumAll(self):
-        self.total = 0
-        self.multiall = 1
-        for e in self.props:
-            self.total += e
-        return self.total
-    def multiAll(self):
-        self.total = 0
-        self.multiall = 1
-        for e in self.props:
-            self.multiall *= e
-        return self.multiall
-    def __str__(self) -> str:
-        return "{'sum' :"+f"{self.sumAll()}"+",'multiAll' :"+f"{self.multiAll()}"+'}'
-myobj = func([1,2,3,4,5])
-print(myobj)
-print(myobj.sumAll())
-print(myobj.multiAll())
+# p4 5 - Formulate a problem of your own and demonstrate list mutability in python.
+testlist = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+testlist.append('hii')
+print('testlist ->',testlist)
+testlist.pop()
+print('testlist ->',testlist)
+testlist.append([14, 15, 16])
+print('testlist ->',testlist)
+testlist.extend([14, 15, 16])
+print('testlist ->',testlist)
+# delet
+del testlist[-1]
+print('testlist ->',testlist)
+testlist.pop()
+testlist.pop()
+testlist.pop()
+print('testlist ->',testlist)
+print('testlist[::-1] ->',testlist[::-1])
+print('testlist[5:8:] ->',testlist[5:8:])
+
+newlist = list()
+newlist.extend(testlist)
+testlist.append(['new1','new2'])
+print('testlist ->',testlist)
+print('newlist ->',newlist)
+testlist.pop()
+
+newlist = testlist
+testlist.append(['new1','new2'])
+print('testlist ->',testlist)
+print('newlist ->',newlist)
+newlist.pop()
+print('testlist ->',testlist)
+print('newlist ->',newlist)
+newlist.clear()
+print('testlist ->',testlist)
+print('newlist ->',newlist)
