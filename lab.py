@@ -1,37 +1,20 @@
-# p4 5 - Formulate a problem of your own and demonstrate list mutability in python.
-testlist = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14]
-testlist.append('hii')
-print('testlist ->',testlist)
-testlist.pop()
-print('testlist ->',testlist)
-testlist.append([14, 15, 16])
-print('testlist ->',testlist)
-testlist.extend([14, 15, 16])
-print('testlist ->',testlist)
-# delet
-del testlist[-1]
-print('testlist ->',testlist)
-testlist.pop()
-testlist.pop()
-testlist.pop()
-print('testlist ->',testlist)
-print('testlist[::-1] ->',testlist[::-1])
-print('testlist[5:8:] ->',testlist[5:8:])
+# p5 1 - WAP to remove multiple elements from a list.
+def removeListElements(ulist,sets,type='n'):
+    if isinstance(ulist, list) and isinstance(sets,list):
+        for i in sets[::-1]:
+            if type == 'n':#normal type by index
+                if i < len(ulist):    
+                    ulist.pop(i)
+            elif type == 'ele':#element type by elements
+                if i in ulist:
+                    ulist.remove(i)
+    else:
+        print('not perfect use of func')
 
-newlist = list()
-newlist.extend(testlist)
-testlist.append(['new1','new2'])
-print('testlist ->',testlist)
-print('newlist ->',newlist)
-testlist.pop()
+testlist1 = [1,2,3,4,5,6,7,8,9,0]
+removeListElements(testlist1,[0,5,8,8536])
+print(testlist1)
 
-newlist = testlist
-testlist.append(['new1','new2'])
-print('testlist ->',testlist)
-print('newlist ->',newlist)
-newlist.pop()
-print('testlist ->',testlist)
-print('newlist ->',newlist)
-newlist.clear()
-print('testlist ->',testlist)
-print('newlist ->',newlist)
+testlist2 = [1,2,3,4,5,6,7,8,9,0]
+removeListElements(testlist2,[0,5,8,1111],'ele')
+print(testlist2)
