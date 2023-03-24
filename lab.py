@@ -1,20 +1,14 @@
-# p5 1 - WAP to remove multiple elements from a list.
-def removeListElements(ulist,sets,type='n'):
-    if isinstance(ulist, list) and isinstance(sets,list):
-        for i in sets[::-1]:
-            if type == 'n':#normal type by index
-                if i < len(ulist):    
-                    ulist.pop(i)
-            elif type == 'ele':#element type by elements
-                if i in ulist:
-                    ulist.remove(i)
-    else:
-        print('not perfect use of func')
+# p5 2 - Write a Python script to concatenate following dictionaries to create a new one
+dic1={1:10, 2:20}
+dic2={3:30, 4:40}
+dic3={5:50,6:60}
 
-testlist1 = [1,2,3,4,5,6,7,8,9,0]
-removeListElements(testlist1,[0,5,8,8536])
-print(testlist1)
+sumdic=dict()
 
-testlist2 = [1,2,3,4,5,6,7,8,9,0]
-removeListElements(testlist2,[0,5,8,1111],'ele')
-print(testlist2)
+for i in dic1.keys():
+    sumdic[i]=dic1[i]
+for i in dic2.keys():
+    sumdic[i]=dic2[i]
+for i in dic3.keys():
+    sumdic[i]=dic3[i]
+print(sumdic)
