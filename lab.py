@@ -1,8 +1,10 @@
-# p6 (error code) - 3
+# p6 (error code) - 4
 # initialize the amount variable
-if(a<3):
-print("gfg")
+try:
+  print(x)
+except:
+  print("An exception occurred")
 
 
 # output - IndentationError: expected an indented block
-#ans -  forgot to give tab or spacing before print statement.
+#ans -  x is not defined anywhere in code so it give error and resoved in except block
