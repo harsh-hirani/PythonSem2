@@ -1,10 +1,10 @@
-# p6 (error code) - 1
+# p6 (error code) - 2
 # initialize the amount variable
-amount = 10000
+marks = 10000
 
-# check that You are eligible to
-# purchase Dsa Self Paced or not
-if(amount>2999)
-	print("You are eligible to purchase Dsa Self Paced")
-# output - SyntaxError: invalid syntax
-#ans - forgot to put : after if statement 
+# perform division with 0
+a = marks / 0
+print(a)
+
+# output - ZeroDivisionError: division by zero
+#ans -  We can’t divide number by zero
