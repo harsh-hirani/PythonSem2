@@ -1,7 +1,13 @@
-# p6 (error code) - 5
+# p6 (error code) - 6
 # initialize the amount variable
-print(x)
+try:
+  print(x)
+except NameError:
+  print("Variable x is not defined")
+except:
+  print("Something else went wrong")
 
 
-# output - NameError: name 'x' is not defined
-#ans -  x is not defined anywhere in code so it give error 
+
+# output - Variable x is not defined
+#ans - As above it is a NameError so it will execute that block
