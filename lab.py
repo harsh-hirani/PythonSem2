@@ -1,10 +1,8 @@
-# p6 (error code) - 2
+# p6 (error code) - 3
 # initialize the amount variable
-marks = 10000
+if(a<3):
+print("gfg")
 
-# perform division with 0
-a = marks / 0
-print(a)
 
-# output - ZeroDivisionError: division by zero
-#ans -  We can’t divide number by zero
+# output - IndentationError: expected an indented block
+#ans -  forgot to give tab or spacing before print statement.
