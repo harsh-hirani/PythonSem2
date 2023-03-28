@@ -1,10 +1,7 @@
-# p6 (error code) - 4
+# p6 (error code) - 5
 # initialize the amount variable
-try:
-  print(x)
-except:
-  print("An exception occurred")
+print(x)
 
 
-# output - IndentationError: expected an indented block
-#ans -  x is not defined anywhere in code so it give error and resoved in except block
+# output - NameError: name 'x' is not defined
+#ans -  x is not defined anywhere in code so it give error 
