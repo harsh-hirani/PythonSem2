@@ -1,13 +1,12 @@
-# p6 (error code) - 6
+# p6 (error code) - 7
 # initialize the amount variable
+
 try:
-  print(x)
-except NameError:
-  print("Variable x is not defined")
+    print('Hello')
 except:
-  print("Something else went wrong")
+    print('Somethinng went wrong')
+else:
+    print('Nothing went wrong')
 
-
-
-# output - Variable x is not defined
-#ans - As above it is a NameError so it will execute that block
+# output - Hello\nNothing went wrong
+#ans - Print statement didn’t give any error that’s why else statement ran
