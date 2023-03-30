@@ -1,14 +1,7 @@
-# p6 (error code) - 9
+# p6 (error code) - 11
 # initialize the amount variable
-try:
-    f= open("demofile.txt")
-    try:
-        f.write("Lorum lpsum")
-    except:
-        print("Something went wrong while writing to the file")
-    finally:
-        f.close()
-except:
-    print("Something went wrong while opening the file")
-# output - Something went wrong while opening the file
-#ans - File doesn’t exist 
+x='hello'
+if not type(x) is int:
+    raise TypeError('Only integers are allowed')
+# output - TypeError: Only integers are allowed
+#ans - String is stored in x but condition check for it to be int and if not raise a type error with msg
