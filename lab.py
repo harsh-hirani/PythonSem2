@@ -1,10 +1,14 @@
-# p6 (error code) - 8
+# p6 (error code) - 9
 # initialize the amount variable
 try:
-    print(x)
+    f= open("demofile.txt")
+    try:
+        f.write("Lorum lpsum")
+    except:
+        print("Something went wrong while writing to the file")
+    finally:
+        f.close()
 except:
-    print("Something went wrong")
-finally:
-    print("The 'try except' is finished")
-# output - Hello\nNothing went wrong
-#ans -X is not declared so it will give NameError and resolve it in except block
+    print("Something went wrong while opening the file")
+# output - Something went wrong while opening the file
+#ans - File doesn’t exist 
