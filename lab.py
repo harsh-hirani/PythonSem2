@@ -1,12 +1,10 @@
-# p6 (error code) - 7
+# p6 (error code) - 8
 # initialize the amount variable
-
 try:
-    print('Hello')
+    print(x)
 except:
-    print('Somethinng went wrong')
-else:
-    print('Nothing went wrong')
-
+    print("Something went wrong")
+finally:
+    print("The 'try except' is finished")
 # output - Hello\nNothing went wrong
-#ans - Print statement didn’t give any error that’s why else statement ran
+#ans -X is not declared so it will give NameError and resolve it in except block
