@@ -1,6 +1,6 @@
-# p6 (error code) - 16 A
+# p6 (error code) - 16 B
 # initialize the amount variable
-import re
+#IOErr
+f = open('jjjjj')
 
-# ans -File doesn’t exist 
-#out -Something went wrong when opening the file
+#out -Something went wrong when opening the file 
