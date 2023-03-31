@@ -1,6 +1,6 @@
-# p6 (error code) - 16 B
+# p6 (error code) - 16 D
 # initialize the amount variable
-#IOErr
-f = open('jjjjj')
+#ZeroDevisionError
+y = 5 / 0
 
-#out -Something went wrong when opening the file 
+#out - ZeroDivisionError: division by zero 
