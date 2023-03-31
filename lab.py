@@ -1,7 +1,11 @@
-# p6 (error code) - 10
+# p6 (error code) - 12 - 6
 # initialize the amount variable
-x=-1
-if x<0:
-    raise Exception('Sorry, no numbers below zero')
-# output - TypeError: Only integers are allowed
-#ans - Since x is less than 0 it will raise exception with msg given
+try:
+  print(x)
+except NameError:
+  print("Variable x is not defined")
+except:
+  print("Something else went wrong")
+
+# output - Variable x is not defined
+#ans - As above it is a NameError so it will execute that block
