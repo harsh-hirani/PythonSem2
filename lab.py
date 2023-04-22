@@ -1,4 +1,4 @@
-# sa3 x5
+# sa3 x6
 import matplotlib.pyplot as plt
 import numpy as np
 xpoints = np.array([0, 6])
